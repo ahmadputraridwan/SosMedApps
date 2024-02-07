@@ -34,7 +34,7 @@ const MyProfile: React.FC = () => {
         <Flex w="full">
           <Flex flexDirection="column" mb="30px" w="full" px={4}>
             <Image
-              src="https://i.ibb.co/B3gYTYs/Profile-Image.png"
+              src="/img/mario.png"
               border="5px solid red"
               borderColor={boxBg}
               width="68px"
@@ -43,12 +43,12 @@ const MyProfile: React.FC = () => {
               borderRadius="50%"
             />
             <Text fontWeight="600" color={mainText} fontSize="xl">
-              ✨Adela Parkson✨
+              ✨APutraRidwan✨
             </Text>
             <Text color={secondaryText} fontSize="sm" fontWeight="500">
-              @adelapark
+              @insomniatic
             </Text>
-            <Text fontSize="13px">picked over by the worm</Text>
+            <Text fontSize="13px">live in the now, not the pas was or will be</Text>
             <Flex gap={4}>
               <Flex alignItems="center" gap="2px">
                 <Text fontWeight="bold">2</Text>
@@ -58,7 +58,7 @@ const MyProfile: React.FC = () => {
               <Flex alignItems="center" gap="2px">
                 <Text fontWeight="bold">23.445.555</Text>
                 <Text fontSize="14px" color={mainText}>
-                  Follower
+                  Followers
                 </Text>
               </Flex>
             </Flex>

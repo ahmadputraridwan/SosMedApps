@@ -16,7 +16,7 @@ export default function CreatePost() {
     </Box>
     <Flex gap={4} alignItems='center'>
         <Avatar name="Dan Abrahmov" src="https://bit.ly/sage-adebayo"/>
-        <Input/>
+        <Input border={'none'} placeholder='What is happening?!'/>
         <Button bg='white'>
             <LuImagePlus color='purple' size={35}/>
         </Button>

@@ -25,18 +25,17 @@ import {
   }
   
   const CardPost: React.FC<CardPostProps> = (props) => {
-    const { name, username, avatar, date, desc, like, comment } = props;
+    const { name, username, avatar, date, desc, comment } = props;
     const [liked, setLiked] = useState<boolean>(false);
-    const [countLike, setCountLike] = useState<number>(like);
+    const [Likes, setLikes] = useState<number>(10);
   
     const handleLike = () => {
       if (!liked) {
-        setLiked(true);
-        setCountLike(countLike + 1);
+        setLikes(Likes + 1);
       } else {
-        setLiked(false);
-        setCountLike(countLike - 1);
+        setLikes(Likes - 1);
       }
+      setLiked(!liked);
     };
     return (
       <Card mt={2} p={4}>
@@ -46,7 +45,7 @@ import {
               <Avatar name="Dan Abrahmov" src={avatar} />
             </Box>
             <Box>
-              <Flex gap={1} alignItems="center">
+              <Flex gap={1} alignItems="center" cursor={'pointer'}>
                 <Heading size="m">{name}</Heading>
                 <Text color="gray">{username}</Text>
                 <Icon boxSize={2} color="gray" mt={1} viewBox="0 0 200 200">
@@ -65,7 +64,7 @@ import {
                   <Flex gap={2}>
                     <FaRegHeart color={liked ? "red" : "gray"} size={21} />
                     <Text color="gray" fontSize={16}>
-                      {countLike}
+                      {Likes}
                     </Text>
                   </Flex>
                 </Button>

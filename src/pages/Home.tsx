@@ -3,10 +3,12 @@ import Sidebar from '../components/Sidebar'
 import CardNew from '../components/CardNew'
 import MyProfile from '../components/MyProfile'
 import CreatePost from '../components/CreatePost'
+import Follow from '../components/Follow'
+import Develop from '../components/Develop'
 
 export default function Home() {
   return (
-    <Flex w='full'>
+    <Flex w='full' bg={'black'}>
       <Box w='20%' display={{base: 'none', md: 'block'}}>
         <Sidebar/>
       </Box>
@@ -18,7 +20,10 @@ export default function Home() {
       </Box>
       <Box w={'30%'} display={{base: 'none', md:'block'}}>
         <MyProfile />
+        <Follow/>
+        <Develop/>
       </Box>
+     
     </Flex>
   )
 }
